@@ -6,44 +6,61 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <title>MORENT - Car Rent</title>
 </head>
 <body>
 
-<div>
+<div class="container-fluid main-div">
 <!--    header-->
-    <header>
-        <section>
-            <p>
+    <header class="header">
+        <section class="col-md-3">
+            <h1 class="blue-text text-center">
                 MORENT
-            </p>
+            </h1>
         </section>
-        <section>
-            <button>
-                <img src="img/icons/search.png" alt="search">
-            </button>
-            <input type="text" placeholder="Search something here">
-            <button>
+        <section class="col-md-3 border-input row justify-content-between">
+            <div>
+                <button class="input-img-left bg-white">
+                    <img src="img/icons/search.png" alt="search">
+                </button>
+                <label for="header-input"></label>
+                <input id="header-input" type="text" placeholder="Search something here" class="">
+            </div>
+            <button class="input-img-right bg-white">
                 <img src="img/icons/filter.png" alt="filter">
             </button>
         </section>
-        <section>
-            <img src="img/icons/user-like.png" alt="user-likes">
-            <img src="img/icons/user-notification.png" alt="user-notification">
-            <img src="img/icons/user-setting.png" alt="user-setting">
-            <img src="img/icons/user-photo.png" alt="user-photo">
+        <section class="col-md-4 row justify-content-end">
+            <a href="#" class="">
+                <img src="img/icons/user-like.png" alt="user-likes" class="w-20 border-gray">
+            </a>
+            <a href="#" class="">
+                <img src="img/icons/user-notification.png" alt="user-notification" class="w-15 border-gray">
+            </a>
+            <a href="#" class="">
+                <img src="img/icons/user-setting.png" alt="user-setting" class="w-20 border-gray">
+            </a>
+            <a href="#">
+                <img src="img/icons/user-photo.png" alt="user-photo" class="w-44">
+            </a>
         </section>
     </header>
 
 <!--    maim section-->
-    <main>
+    <main class="row">
 <!--        sidebar-->
-        <section>
+        <section class="sidebar col-md-3">
 <!--            type-->
-            <section>
-                <p>type</p>
+            <section class="sidebar__section">
+                <p class="sidebar__title">type</p>
                 <input type="checkbox" id="type1" name="type1" value="sport">
                 <label for="type1">Sport</label>
                 <br>
@@ -65,8 +82,8 @@
             </section>
 
 <!--            capacity-->
-            <section>
-                <p>capacity</p>
+            <section class="sidebar__section">
+                <p class="sidebar__title">capacity</p>
                 <input type="checkbox" id="capacity1" name="capacity1" value="2 Person">
                 <label for="capacity1">2 Person</label>
                 <br>
@@ -82,189 +99,196 @@
             </section>
 
 <!--            price-->
-            <section>
+            <section class="sidebar__section">
+                <p class="sidebar__title">price</p>
 <!--                loading price-->
                 <p>Max. $<span>100.00</span></p>
             </section>
         </section>
 
 <!--        main content-->
-        <section>
+        <section class="main__content col-md-9">
 <!--            selected car-->
-            <section>
-<!--                left part-->
-<!--                CARUOSEL!!!-->
-                <section>
-                    <img src="img/View-1.png" alt="">
-                    <img src="img/View-2.png" alt="">
-                    <img src="img/View-3.png" alt="">
+            <section class="row justify-content-between selected__car">
+                <section class="selected__car-carousel">
+                    <!--                CAROUSEL!!!-->
+                    
                 </section>
-<!--                right part-->
-                <section>
-<!--                    name-->
-                    <h4>
-                        Nissan GT - R
-                    </h4>
-<!--                    grade-->
-                    <div>
-                        <div>
-                            <img src="img/icons/star-gold.png" alt="gold star">
-                            <img src="img/icons/star-gold.png" alt="gold star">
-                            <img src="img/icons/star-gold.png" alt="gold star">
-                            <img src="img/icons/star-gold.png" alt="gold star">
-                            <img src="img/icons/star.png" alt="star">
+                <!--                right part-->
+                <section  class="selected__car-info">
+                    <header>
+                        <!--                    name-->
+                        <h4>
+                            Nissan GT - R
+                        </h4>
+                        <!--                    grade-->
+                        <div class="selected__car-info-reviews">
+                            <div>
+                                <img src="img/icons/star-gold.png" alt="gold star">
+                                <img src="img/icons/star-gold.png" alt="gold star">
+                                <img src="img/icons/star-gold.png" alt="gold star">
+                                <img src="img/icons/star-gold.png" alt="gold star">
+                                <img src="img/icons/star.png" alt="star">
+                            </div>
+                            <a href="#">440+ Reviewer</a>
                         </div>
-                        <a href="#">440+ Reviewer</a>
-                    </div>
-<!--                    description-->
-                    <p>
+                    </header>
+                    <!--                    description-->
+                    <p class="selected__car-info-text">
                         NISMO has become the embodiment of Nissan's outstanding performance,
                         inspired by the most unforgiving proving ground, the "race track".
                     </p>
-<!--                    main info-->
-                    <div>
-                        <div>
+                    <!--                    main info-->
+                    <div class="selected__car-main_info">
+                        <div class="selected__car-main_info-left col-5">
                             <div>
-                                <p>Type Car</p>
-                                <p>Sport</p>
+                                <p class="selected__car_gray-text">Type Car</p>
+                                <p class="selected__car_bold-text">Sport</p>
                             </div>
                             <div>
-                                <p>Steering</p>
-                                <p>Manual</p>
+                                <p class="selected__car_gray-text">Steering</p>
+                                <p class="selected__car_bold-text">Manual</p>
                             </div>
                         </div>
-                        <div>
+                        <div class="selected__car-main_info-right col-5">
                             <div>
-                                <p>Capacity</p>
-                                <p>2 Person</p>
+                                <p class="selected__car_gray-text">Capacity</p>
+                                <p class="selected__car_bold-text">2 Person</p>
                             </div>
                             <div>
-                                <p>Gasoline</p>
-                                <p>70L</p>
+                                <p class="selected__car_gray-text">Gasoline</p>
+                                <p class="selected__car_bold-text">70L</p>
                             </div>
                         </div>
                     </div>
-<!--                    price and order-->
-                    <div>
-<!--                        price-->
+                    <!--                    price and order-->
+                    <footer class="selected__car-footer">
+                        <!--                        price-->
                         <div>
                             <p>
-                                $80.00/<span>days</span><br>
-                                <span>$100.00</span>
+                                $80.00/ <span>days</span><br>
+<!--                                <span>$100.00</span>-->
                             </p>
                         </div>
-<!--                        order-->
+                        <!--                        order-->
                         <div>
                             <a href="#">
                                 Rent Now
                             </a>
                         </div>
-                    </div>
+                    </footer>
                 </section>
             </section>
-
-<!--            reviews-->
-            <section>
-                <div>
-                    <h3>Reviews</h3>
-                    <span></span>
+            <!--            reviews-->
+            <section class="reviews">
+                <div class="reviews__top">
+                    <h3 class="reviews__title">Reviews</h3>
+                    <span id="reviews-count" class="reviews-count">13</span>
                 </div>
-                <div></div>
-                <div>
-                    <p>Show All</p>
-                    <img src="img/icons/arrow.png" alt="arrow">
+                <div id="all-reviews"></div>
+                <div class="row justify-content-center">
+                    <a class="reviews__show">
+                        <p>Show All</p>
+                        <img src="img/icons/arrow.png" alt="arrow">
+                    </a>
                 </div>
             </section>
-        </section>
 
-<!--        Recent Car-->
-        <section>
-            <div>
-                <p>Recent Car</p>
-                <button>View All</button>
-            </div>
-            <div></div>
-        </section>
+            <!--        Recent Car-->
+            <section class="recent__car">
+                <header class="recent__car-header">
+                    <p class="car__section-title">Recent Car</p>
+                    <button>View All</button>
+                </header>
+                <div class="recent__car_list"></div>
+            </section>
 
-        <!--        Recomendation Car-->
-        <section>
-            <div>
-                <p>Recomendation Car</p>
-                <button>View All</button>
-            </div>
-            <div></div>
+            <!--        Recommendation Car-->
+            <section class="recommend__car">
+                <header class="recommend__car-header">
+                    <p class="car__section-title text-primary">Recommendation Car</p>
+                    <button>View All</button>
+                </header>
+                <div class="recommend__car_list"></div>
+            </section>
         </section>
     </main>
 
 <!--    footer-->
-    <footer>
-        <div>
-            <div>
-                <h1>MORENT</h1>
-                <p>Our vision is to provide convenience
+    <footer class="footer">
+        <div class="row footer__top">
+            <div class="col-md-6">
+                <h2 class="footer__top_title">MORENT</h2>
+                <p class="footer__top_text">Our vision is to provide convenience
                     and help increase your sales business.</p>
             </div>
-            <div>
-                <h5>About</h5>
-                <ul>
-                    <li>
-                        <a href="#">How it works</a>
-                    </li>
-                    <li>
-                        <a href="#">Featured</a>
-                    </li>
-                    <li>
-                        <a href="#">Partnership</a>
-                    </li>
-                    <li>
-                        <a href="#">Bussiness Relation</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h5>Community</h5>
-                <ul>
-                    <li>
-                        <a href="#">Events</a>
-                    </li>
-                    <li>
-                        <a href="#">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#">Podcast</a>
-                    </li>
-                    <li>
-                        <a href="#">Invite a friend</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h5>Social</h5>
-                <ul>
-                    <li>
-                        <a href="#">Discord</a>
-                    </li>
-                    <li>
-                        <a href="#">Instagram</a>
-                    </li>
-                    <li>
-                        <a href="#">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="#">Facebook</a>
-                    </li>
-                </ul>
+            <div class="col-md-6 row justify-content-between">
+                <div>
+                    <h5>About</h5>
+                    <ul>
+                        <li>
+                            <a href="#">How it works</a>
+                        </li>
+                        <li>
+                            <a href="#">Featured</a>
+                        </li>
+                        <li>
+                            <a href="#">Partnership</a>
+                        </li>
+                        <li>
+                            <a href="#">Bussiness Relation</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Community</h5>
+                    <ul>
+                        <li>
+                            <a href="#">Events</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Podcast</a>
+                        </li>
+                        <li>
+                            <a href="#">Invite a friend</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Social</h5>
+                    <ul>
+                        <li>
+                            <a href="#">Discord</a>
+                        </li>
+                        <li>
+                            <a href="#">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#">Facebook</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div>
-            <div>
-                <p>©2022 MORENT. All rights reserved</p>
-            </div>
-            <div>
-                <a href="#">Privacy & Policy</a>
-            </div>
-            <div>
-                <a href="#">Terms & Condition</a>
+        <div class="footer__bottom">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>©2022 MORENT. All rights reserved</p>
+                </div>
+                <div class="col-md-6 row justify-content-end footer__bottom_right">
+                    <div>
+                        <a href="#">Privacy & Policy</a>
+                    </div>
+                    <div>
+                        <a href="#">Terms & Condition</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
@@ -272,48 +296,53 @@
 
 <!--    TEMPLATES-->
 <!--template review-->
-<template>
-    <div>
-        <img src="{{userImage}}" alt="user photo">
-    </div>
-    <div>
+<template id="review__item">
+    <div class="reviews__main-div">
         <div>
-            <div>
-                <p>{{userName}}</p>
-                <p>{{userProf}}</p>
-            </div>
-            <div>
-                <p>{{date}}</p>
-                <div>
-                    <img src="img/icons/star-gold.png" alt="gold star">
-                    <img src="img/icons/star-gold.png" alt="gold star">
-                    <img src="img/icons/star-gold.png" alt="gold star">
-                    <img src="img/icons/star-gold.png" alt="gold star">
-                    <img src="img/icons/star.png" alt="star">
-                </div>
-            </div>
+            <img src="{{userImage}}" alt="user photo" class="reviews__user-image">
         </div>
         <div>
-            <p>{{textReview}}</p>
+            <div class="reviews__main-info">
+                <div>
+                    <p class="reviews__user-name">{{userName}}</p>
+                    <p class="reviews__gray-text">{{userProf}}</p>
+                </div>
+                <div class="reviews__date-info">
+                    <p class="reviews__gray-text">{{date}}</p>
+                    <div>
+                        <img src="img/icons/star-gold.png" alt="gold star">
+                        <img src="img/icons/star-gold.png" alt="gold star">
+                        <img src="img/icons/star-gold.png" alt="gold star">
+                        <img src="img/icons/star-gold.png" alt="gold star">
+                        <img src="img/icons/star.png" alt="star">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="reviews__text">{{textReview}}</p>
+            </div>
         </div>
     </div>
 </template>
 <!--template car-->
-<template>
-    <div>
-        <header>
-            <div>
-                <p>{{carName}}</p>
+<template id="car__item">
+    <div class="car__item">
+        <header class="car__item_top">
+            <div class="car__item_top-left">
+                <h3>{{carName}}</h3>
                 <p>{{carClass}}</p>
             </div>
             <div>
-                <img src="{{imageLike}}" alt="imageLike">
+                <button>
+                    <img src="{{imageLike}}" alt="imageLike">
+                </button>
             </div>
         </header>
-        <div>
+        <div class="car__item-image">
             <img src="{{imageCar}}" alt="imageCar">
+            <div class="car__item-image_gradient"></div>
         </div>
-        <div>
+        <div class="car__item-info">
             <div>
                 <img src="img/icons/gasoline.png" alt="gasoline">
                 <p>{{gasoline}}</p>
@@ -327,10 +356,10 @@
                 <p>{{capacity}}</p>
             </div>
         </div>
-        <footer>
+        <footer class="car__item-footer">
             <div>
                 <p>
-                    ${{price}}/<span>day</span>
+                    ${{price}}/<span> day</span>
                 </p>
             </div>
             <div>
@@ -342,5 +371,9 @@
     </div>
 </template>
 
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/mustache.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
