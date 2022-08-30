@@ -84,9 +84,11 @@ main {
 .selected__car {
     max-width: 1000px;
     margin: 0 0 32px 0;
+    padding: 0;
 }
 .selected__car-carousel {
-    margin: 0 32px;
+    padding: 0;
+    /*margin: 0 32px;*/
 }
 .selected__car-info {
     background: #fff;

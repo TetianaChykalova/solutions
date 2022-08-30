@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css">
     <link rel="shortcut icon" href="img/logo.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -109,13 +110,77 @@
 <!--        main content-->
         <section class="main__content col-md-9">
 <!--            selected car-->
-            <section class="row justify-content-between selected__car">
-                <section class="selected__car-carousel">
+            <section class="row justify-content-between selected__car col-md-6">
+                <section class="selected__car-carousel col-md-6">
                     <!--                CAROUSEL!!!-->
-                    
+                    <div id="slider">
+                        <div id="carCarousel" class="carousel slide selected__car-carousel-sections" data-interval="false">
+                            <div class="carousel-inner">
+                                <div class="active item carousel-item" data-slide-number="0">
+                                    <img src="img/View-1-active.png" class="img-fluid" alt="car">
+                                    <div class="carousel-caption d-none d-md-block carousel-text">
+                                        <p>
+                                            Sports car with the best design and acceleration
+                                        </p>
+                                        <p>
+                                            Safety and comfort while driving a
+                                            futuristic and elegant sports car
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item carousel-item" data-slide-number="1">
+                                    <img src="img/View-2.png" class="img-fluid" alt="car">
+                                </div>
+                                <div class="item carousel-item" data-slide-number="2">
+                                    <img src="img/View-3.png" class="img-fluid" alt="car">
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-target="#carCarousel" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<!--                                    <span class="sr-only">Previous</span>-->
+                                </button>
+                                <button class="carousel-control-next" type="button" data-target="#carCarousel" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+<!--                                    <span class="sr-only">Next</span>-->
+                                </button>
+                            </div>
+
+                            <div class="carousel-indicators selected__car-indicators">
+                                <button type="button" data-mdb-target="#carCarousel" data-slide-to="0" class="list-inline-item active"
+                                        aria-current="true" aria-label="Slide 0">
+                                    <img src="img/View-1.png" class="d-block w-100" alt="car">
+                                </button>
+                                <button type="button" data-mdb-target="#carCarousel" data-slide-to="0" class="list-inline-item"
+                                        aria-current="true" aria-label="Slide 1">
+                                    <img src="img/View-2.png" class="d-block w-100" alt="car">
+                                </button>
+                                <button type="button" data-mdb-target="#carCarousel" data-slide-to="0" class="list-inline-item"
+                                        aria-current="true" aria-label="Slide 2">
+                                    <img src="img/View-3.png" class="d-block w-100" alt="car">
+                                </button>
+                            </div>
+<!--                            <ul class="carousel-indicators list-inline selected__car-indicators">-->
+<!--                                <li class="list-inline-item active">-->
+<!--                                    <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#myCarousel">-->
+<!--                                        <img src="img/View-1.png" class="img-fluid" alt="car">-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li class="list-inline-item">-->
+<!--                                    <a id="carousel-selector-1" data-slide-to="1" data-target="#myCarousel">-->
+<!--                                        <img src="img/View-2.png" class="img-fluid" alt="car">-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li class="list-inline-item">-->
+<!--                                    <a id="carousel-selector-2" data-slide-to="2" data-target="#myCarousel">-->
+<!--                                        <img src="img/View-3.png" class="img-fluid" alt="car">-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+                        </div>
+                    </div>
                 </section>
                 <!--                right part-->
-                <section  class="selected__car-info">
+                <section  class="selected__car-info col-md-6">
                     <header>
                         <!--                    name-->
                         <h4>
