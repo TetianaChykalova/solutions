@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/burger.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/carousel.css">
     <link rel="shortcut icon" href="img/logo.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,107 +18,150 @@
     <title>MORENT - Car Rent</title>
 </head>
 <body>
-
-<div class="container-fluid main-div">
+<!--div container-->
+<div class="container-fluid">
+    <div class="header__burger" id="header-burger">
+        <span></span>
+    </div>
+    <div class="dropleft header__burger-user">
+        <button data-toggle="dropdown" aria-expanded="false">
+            <img src="img/icons/user-photo.png" alt="user-photo">
+        </button>
+        <div class="dropdown-menu header__burger-user-menu">
+            <a class="dropdown-item" href="#">
+                Profile
+            </a>
+            <a class="dropdown-item" href="#">
+                <img src="img/icons/user-like.png" alt="like">
+                Likes
+            </a>
+            <a class="dropdown-item" href="#">
+                <img src="img/icons/user-notification.png" alt="notification">
+                Notification
+            </a>
+            <a class="dropdown-item" href="#">
+                <img src="img/icons/user-setting.png" alt="setting">
+                Setting
+            </a>
+        </div>
+    </div>
 <!--    header-->
-    <header class="header">
-        <section class="col-md-3">
-            <h1 class="blue-text text-center">
-                MORENT
-            </h1>
+    <header class="morent__header">
+        <section class="header__mobile">
+            <!--        title-->
+            <section class="header__title">
+                <h1>MORENT</h1>
+            </section>
+            <!--        mobile - bottom-->
+            <section class="header__mobile-bottom">
+                <!--           input-->
+                <div class="header__input">
+                    <button>
+                        <img src="img/icons/search.png" alt="search">
+                    </button>
+                    <label for="header-input"></label>
+                    <input id="header-input" type="text" placeholder="Search something here">
+                </div>
+                <!--           filter-->
+                <div class="header__filter">
+                    <button>
+                        <img src="img/icons/filter.png" alt="filter">
+                    </button>
+                </div>
+            </section>
         </section>
-        <section class="col-md-3 border-input row justify-content-between">
-            <div>
-                <button class="input-img-left bg-white">
-                    <img src="img/icons/search.png" alt="search">
+<!--           user-->
+        <section class="header__general-user">
+    <!--           user details-->
+            <div class="header__user-details">
+                <button>
+                    <img src="img/icons/user-like.png" alt="user-likes">
                 </button>
-                <label for="header-input"></label>
-                <input id="header-input" type="text" placeholder="Search something here" class="">
+                <button class="position-relative">
+                    <img src="img/icons/user-notification.png" alt="user-notification" class="user__notification-img">
+                    <img src="img/icons/notif-true.png" alt="" class="user__notification-true">
+                </button>
+                <button>
+                    <img src="img/icons/user-setting.png" alt="user-setting">
+                </button>
             </div>
-            <button class="input-img-right bg-white">
-                <img src="img/icons/filter.png" alt="filter">
-            </button>
-        </section>
-        <section class="col-md-4 row justify-content-end">
-            <a href="#" class="">
-                <img src="img/icons/user-like.png" alt="user-likes" class="w-20 border-gray">
-            </a>
-            <a href="#" class="">
-                <img src="img/icons/user-notification.png" alt="user-notification" class="w-15 border-gray">
-            </a>
-            <a href="#" class="">
-                <img src="img/icons/user-setting.png" alt="user-setting" class="w-20 border-gray">
-            </a>
-            <a href="#">
-                <img src="img/icons/user-photo.png" alt="user-photo" class="w-44">
-            </a>
+
+    <!--        mobile - top-->
+    <!--        user info-->
+            <div class="header__user">
+                <button>
+                    <img src="img/icons/user-photo.png" alt="user-photo">
+                </button>
+            </div>
         </section>
     </header>
 
-<!--    maim section-->
-    <main class="row">
+<!--    main-->
+    <main class="morent__main">
 <!--        sidebar-->
-        <section class="sidebar col-md-3">
-<!--            type-->
+        <section class="sidebar" id="content-burger">
+            <!--            type-->
             <section class="sidebar__section">
                 <p class="sidebar__title">type</p>
                 <input type="checkbox" id="type1" name="type1" value="sport">
-                <label for="type1">Sport</label>
+                <label for="type1">Sport<span class="sidebar__car-count">(10)</span></label>
                 <br>
                 <input type="checkbox" id="type2" name="type2" value="sport">
-                <label for="type2">SUV</label>
+                <label for="type2">SUV<span class="sidebar__car-count">(12)</span></label>
                 <br>
                 <input type="checkbox" id="type3" name="type3" value="sport">
-                <label for="type3">MPV</label>
+                <label for="type3">MPV<span class="sidebar__car-count">(16)</span></label>
                 <br>
                 <input type="checkbox" id="type4" name="type4" value="sport">
-                <label for="type4">Sedan</label>
+                <label for="type4">Sedan<span class="sidebar__car-count">(20)</span></label>
                 <br>
                 <input type="checkbox" id="type5" name="type5" value="sport">
-                <label for="type5">Coupe</label>
+                <label for="type5">Coupe<span class="sidebar__car-count">(14)</span></label>
                 <br>
                 <input type="checkbox" id="type6" name="type6" value="sport">
-                <label for="type6">Hatchback</label>
+                <label for="type6">Hatchback<span class="sidebar__car-count">(14)</span></label>
                 <br>
             </section>
 
-<!--            capacity-->
+            <!--            capacity-->
             <section class="sidebar__section">
                 <p class="sidebar__title">capacity</p>
                 <input type="checkbox" id="capacity1" name="capacity1" value="2 Person">
-                <label for="capacity1">2 Person</label>
+                <label for="capacity1">2 Person<span class="sidebar__car-count">(10)</span></label>
                 <br>
                 <input type="checkbox" id="capacity2" name="capacity2" value="4 Person">
-                <label for="capacity2">4 Person</label>
+                <label for="capacity2">4 Person<span class="sidebar__car-count">(14)</span></label>
                 <br>
                 <input type="checkbox" id="capacity3" name="capacity3" value="6 Person">
-                <label for="capacity3">6 Person</label>
+                <label for="capacity3">6 Person<span class="sidebar__car-count">(12)</span></label>
                 <br>
                 <input type="checkbox" id="capacity4" name="capacity4" value="8 or More">
-                <label for="capacity4">8 or More</label>
+                <label for="capacity4">8 or More<span class="sidebar__car-count">(16)</span></label>
                 <br>
             </section>
 
-<!--            price-->
+            <!--            price-->
             <section class="sidebar__section">
                 <p class="sidebar__title">price</p>
-<!--                loading price-->
-                <p>Max. $<span>100.00</span></p>
+                <!--                loading price-->
+                <div class="sidebar__price-slidecontainer">
+                    <input type="range" min="20" max="150" value="100" id="userPrice">
+                </div>
+                <label for="userPrice">Max. $<span id="sidebar-price-value">100.00</span></label>
             </section>
         </section>
-
-<!--        main content-->
-        <section class="main__content col-md-9">
+<!--        content-->
+        <section class="content">
 <!--            selected car-->
-            <section class="row justify-content-between selected__car col-md-6">
-                <section class="selected__car-carousel col-md-6">
-                    <!--                CAROUSEL!!!-->
+            <section class="selected__car">
+<!--                carousel-->
+                <section class="selected__car-carousel">
                     <div id="slider">
                         <div id="carCarousel" class="carousel slide selected__car-carousel-sections" data-interval="false">
-                            <div class="carousel-inner">
+                            <div class="carousel-inner selected__car-carousel-top">
                                 <div class="active item carousel-item" data-slide-number="0">
                                     <img src="img/View-1-active.png" class="img-fluid" alt="car">
-                                    <div class="carousel-caption d-none d-md-block carousel-text">
+                                    <div class="carousel-caption carousel-text">
                                         <p>
                                             Sports car with the best design and acceleration
                                         </p>
@@ -137,11 +180,11 @@
 
                                 <button class="carousel-control-prev" type="button" data-target="#carCarousel" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-<!--                                    <span class="sr-only">Previous</span>-->
+                                    <!--                                    <span class="sr-only">Previous</span>-->
                                 </button>
                                 <button class="carousel-control-next" type="button" data-target="#carCarousel" data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-<!--                                    <span class="sr-only">Next</span>-->
+                                    <!--                                    <span class="sr-only">Next</span>-->
                                 </button>
                             </div>
 
@@ -159,28 +202,11 @@
                                     <img src="img/View-3.png" class="d-block w-100" alt="car">
                                 </button>
                             </div>
-<!--                            <ul class="carousel-indicators list-inline selected__car-indicators">-->
-<!--                                <li class="list-inline-item active">-->
-<!--                                    <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#myCarousel">-->
-<!--                                        <img src="img/View-1.png" class="img-fluid" alt="car">-->
-<!--                                    </a>-->
-<!--                                </li>-->
-<!--                                <li class="list-inline-item">-->
-<!--                                    <a id="carousel-selector-1" data-slide-to="1" data-target="#myCarousel">-->
-<!--                                        <img src="img/View-2.png" class="img-fluid" alt="car">-->
-<!--                                    </a>-->
-<!--                                </li>-->
-<!--                                <li class="list-inline-item">-->
-<!--                                    <a id="carousel-selector-2" data-slide-to="2" data-target="#myCarousel">-->
-<!--                                        <img src="img/View-3.png" class="img-fluid" alt="car">-->
-<!--                                    </a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
                         </div>
                     </div>
                 </section>
-                <!--                right part-->
-                <section  class="selected__car-info col-md-6">
+<!--                selected car info-->
+                <section class="selected__car-info">
                     <header>
                         <!--                    name-->
                         <h4>
@@ -232,7 +258,7 @@
                         <div>
                             <p>
                                 $80.00/ <span>days</span><br>
-<!--                                <span>$100.00</span>-->
+                                <!--                                <span><s>$100.00</s></span>-->
                             </p>
                         </div>
                         <!--                        order-->
@@ -244,16 +270,17 @@
                     </footer>
                 </section>
             </section>
-            <!--            reviews-->
+
+<!--            reviews-->
             <section class="reviews">
                 <div class="reviews__top">
                     <h3 class="reviews__title">Reviews</h3>
-                    <span id="reviews-count" class="reviews-count">13</span>
+                    <span id="reviews-count" class="reviews-count"></span>
                 </div>
-                <div id="all-reviews"></div>
+                <div id="all-reviews" class="reviews__list"></div>
                 <div class="row justify-content-center">
                     <a class="reviews__show">
-                        <p>Show All</p>
+                        Show All
                         <img src="img/icons/arrow.png" alt="arrow">
                     </a>
                 </div>
@@ -280,14 +307,14 @@
     </main>
 
 <!--    footer-->
-    <footer class="footer">
-        <div class="row footer__top">
-            <div class="col-md-6">
+    <footer class="morent__footer">
+        <div class="footer__top">
+            <div class="footer__top-left">
                 <h2 class="footer__top_title">MORENT</h2>
                 <p class="footer__top_text">Our vision is to provide convenience
                     and help increase your sales business.</p>
             </div>
-            <div class="col-md-6 row justify-content-between">
+            <div class="footer__top-right">
                 <div>
                     <h5>About</h5>
                     <ul>
@@ -342,11 +369,11 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <div class="row">
-                <div class="col-md-6">
+            <div class="footer__bottom-content">
+                <div class="">
                     <p>©2022 MORENT. All rights reserved</p>
                 </div>
-                <div class="col-md-6 row justify-content-end footer__bottom_right">
+                <div class="footer__bottom_right">
                     <div>
                         <a href="#">Privacy & Policy</a>
                     </div>
@@ -357,9 +384,11 @@
             </div>
         </div>
     </footer>
+
+<!--div container-->
 </div>
 
-<!--    TEMPLATES-->
+<!--templates-->
 <!--template review-->
 <template id="review__item">
     <div class="reviews__main-div">
@@ -383,8 +412,9 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="reviews__comment">
                 <p class="reviews__text">{{textReview}}</p>
+                <div class="reviews_gradient"></div>
             </div>
         </div>
     </div>
@@ -436,9 +466,11 @@
     </div>
 </template>
 
+<!--script-->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/mustache.min.js"></script>
+<script src="js/filter.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

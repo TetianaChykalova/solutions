@@ -1,3 +1,4 @@
+//VARIABLES
 const reviews = [
     {
         userImage: "img/user-photo-rev.png",
@@ -16,6 +17,116 @@ const reviews = [
         date: "20 July 2022",
         textReview: "We are greatly helped by the services of the MORENT Application. " +
             "Morent has low prices and also a wide variety of cars with good " +
+            "and comfortable facilities. In addition, the service provided " +
+            "by the officers is also very friendly and very polite.",
+    },
+    {
+        userImage: "img/user-photo-rev.png",
+        userName: "Alex Stanton",
+        userProf: "CEO at Bukalapak",
+        date: "21 July 2022",
+        textReview: "We are very happy with the service from the MORENT App. " +
+            "Morent has a low price and also a large variety of cars with good " +
+            "and comfortable facilities. In addition, the service provided " +
+            "by the officers is also very friendly and very polite.",
+    },
+    {
+        userImage: "img/other-user-photo.png",
+        userName: "Skylar Dias",
+        userProf: "CEO at Amazon",
+        date: "20 July 2022",
+        textReview: "We are greatly helped by the services of the MORENT Application. " +
+            "Morent has low prices and also a wide variety of cars with good " +
+            "and comfortable facilities. In addition, the service provided " +
+            "by the officers is also very friendly and very polite.",
+    },
+    {
+        userImage: "img/user-photo-rev.png",
+        userName: "Alex Stanton",
+        userProf: "CEO at Bukalapak",
+        date: "21 July 2022",
+        textReview: "We are very happy with the service from the MORENT App. " +
+            "Morent has a low price and also a large variety of cars with good " +
+            "and comfortable facilities. In addition, the service provided " +
+            "by the officers is also very friendly and very polite.",
+    },
+    {
+        userImage: "img/other-user-photo.png",
+        userName: "Skylar Dias",
+        userProf: "CEO at Amazon",
+        date: "20 July 2022",
+        textReview: "We are greatly helped by the services of the MORENT Application. " +
+            "Morent has low prices and also a wide variety of cars with good " +
+            "and comfortable facilities. In addition, the service provided " +
+            "by the officers is also very friendly and very polite.",
+    },
+    {
+        userImage: "img/user-photo-rev.png",
+        userName: "Alex Stanton",
+        userProf: "CEO at Bukalapak",
+        date: "21 July 2022",
+        textReview: "We are very happy with the service from the MORENT App. " +
+            "Morent has a low price and also a large variety of cars with good " +
+            "and comfortable facilities. In addition, the service provided " +
+            "by the officers is also very friendly and very polite.",
+    },
+    {
+        userImage: "img/other-user-photo.png",
+        userName: "Skylar Dias",
+        userProf: "CEO at Amazon",
+        date: "20 July 2022",
+        textReview: "We are greatly helped by the services of the MORENT Application. " +
+            "Morent has low prices and also a wide variety of cars with good " +
+            "and comfortable facilities. In addition, the service provided " +
+            "by the officers is also very friendly and very polite.",
+    },
+    {
+        userImage: "img/user-photo-rev.png",
+        userName: "Alex Stanton",
+        userProf: "CEO at Bukalapak",
+        date: "21 July 2022",
+        textReview: "We are very happy with the service from the MORENT App. " +
+            "Morent has a low price and also a large variety of cars with good " +
+            "and comfortable facilities. In addition, the service provided " +
+            "by the officers is also very friendly and very polite.",
+    },
+    {
+        userImage: "img/other-user-photo.png",
+        userName: "Skylar Dias",
+        userProf: "CEO at Amazon",
+        date: "20 July 2022",
+        textReview: "We are greatly helped by the services of the MORENT Application. " +
+            "Morent has low prices and also a wide variety of cars with good " +
+            "and comfortable facilities. In addition, the service provided " +
+            "by the officers is also very friendly and very polite.",
+    },
+    {
+        userImage: "img/user-photo-rev.png",
+        userName: "Alex Stanton",
+        userProf: "CEO at Bukalapak",
+        date: "21 July 2022",
+        textReview: "We are very happy with the service from the MORENT App. " +
+            "Morent has a low price and also a large variety of cars with good " +
+            "and comfortable facilities. In addition, the service provided " +
+            "by the officers is also very friendly and very polite.",
+    },
+    {
+        userImage: "img/other-user-photo.png",
+        userName: "Skylar Dias",
+        userProf: "CEO at Amazon",
+        date: "20 July 2022",
+        textReview: "We are greatly helped by the services of the MORENT Application. " +
+            "Morent has low prices and also a wide variety of cars with good " +
+            "and comfortable facilities. In addition, the service provided " +
+            "by the officers is also very friendly and very polite.",
+    },
+    {
+        userImage: "img/user-photo-rev.png",
+        userName: "Alex Stanton",
+        userProf: "CEO at Bukalapak",
+        date: "21 July 2022",
+        textReview: "We are very happy with the service from the MORENT App. " +
+            "Morent has a low price and also a large variety of cars with good " +
             "and comfortable facilities. In addition, the service provided " +
             "by the officers is also very friendly and very polite.",
     },
@@ -85,9 +196,26 @@ const recommendCar =[
     },
 ];
 let templateCar = document.querySelector("#car__item").innerHTML;
+let templateReview = document.querySelector("#review__item").innerHTML;
+
+//burger
+let headerBurger = document.querySelector("#header-burger");
+let contentBurger = document.querySelector("#content-burger");
+let body = document.body;
+
+headerBurger.addEventListener("click", function() {
+    contentBurger.classList.toggle("active");
+    body.classList.toggle("overflow-hidden");
+})
+
+//notification
+let notifImg = document.querySelector(".user__notification-img");
+let notifTrue = document.querySelector(".user__notification-true");
+if (!notifImg) {
+    notifTrue.style.display = "none";
+}
 
 //template review
-let templateReview = document.querySelector("#review__item").innerHTML;
 let allReviews = document.querySelector("#all-reviews");
 
 function addReview() {
@@ -99,9 +227,14 @@ function addReview() {
 }
 addReview();
 
+//review count
+let countReview = document.querySelector("#reviews-count");
+let lengthReview = reviews.length;
+countReview.append(lengthReview);
+
+
 //template recent car
 let allRecentCar = document.querySelector(".recent__car_list");
-
 function addRecentCar() {
     for (let i = 0; i < recentCar.length; i++) {
         const recentCarItem = recentCar[i];
@@ -113,7 +246,6 @@ addRecentCar();
 
 //template recommend car
 let allRecommendCar = document.querySelector(".recommend__car_list");
-
 function addRecommendCar() {
     for (let i = 0; i < recommendCar.length; i++) {
         const recentCarItem = recommendCar[i];
@@ -122,3 +254,12 @@ function addRecommendCar() {
     }
 }
 addRecommendCar();
+
+//filter
+let sidebarPriceSlider = document.getElementById("userPrice");
+var sidebarPriceValue = document.getElementById("sidebar-price-value");
+sidebarPriceValue.innerHTML = sidebarPriceSlider.value;
+
+sidebarPriceSlider.oninput = function() {
+    sidebarPriceValue.innerHTML = this.value;
+}

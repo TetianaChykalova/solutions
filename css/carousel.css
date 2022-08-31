@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     height: 510px;
-    max-width: 470px;
+    width: 100%;
     justify-content: space-between;
 }
 .carousel-item {
@@ -14,10 +14,6 @@
     object-fit: cover;
     border-radius: 10px;
 }
-/*.list-inline {*/
-/*    white-space:nowrap;*/
-/*    overflow-x:auto;*/
-/*}*/
 .carousel-indicators {
     position: static;
     left: initial;
