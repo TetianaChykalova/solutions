@@ -264,20 +264,27 @@ sidebarPriceSlider.oninput = function() {
 let showBtn = document.querySelectorAll(".reviews__show");
 let showStart = document.querySelector(".reviews__show-start");
 let showEnd =document.querySelector(".reviews__show-end");
+let textReview = document.querySelectorAll(".reviews__text");
 showBtn.forEach(showBtnItem => {
     showBtnItem.addEventListener("click", showReviews)
 })
 
 function showReviews () {
-    if (getComputedStyle(allReviews).maxHeight == "265px") {
-        allReviews.style.maxHeight = "100%"
+    if (getComputedStyle(allReviews).maxHeight == "260px") {
+        allReviews.style.maxHeight = "100%";
         showStart.style.zIndex = "-2";
         showEnd.style.zIndex = "0";
+        textReview.forEach(comment => {
+            comment.style.maxHeight = "100%"
+        })
     }
     else {
-        allReviews.style.maxHeight = "265px"
+        allReviews.style.maxHeight = "260px";
         showStart.style.zIndex = "0";
         showEnd.style.zIndex = "-2";
+        textReview.forEach(comment => {
+            comment.style.maxHeight = "56px"
+        })
     }
 }
 

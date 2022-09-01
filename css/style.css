@@ -377,7 +377,7 @@ body {
     align-items: center;
 }
 .reviews__list {
-    max-height: 265px;
+    max-height: 260px;
     overflow: hidden;
     margin: 0 0 34px 0;
 }
