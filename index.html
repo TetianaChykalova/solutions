@@ -207,67 +207,69 @@
                 </section>
 <!--                selected car info-->
                 <section class="selected__car-info">
-                    <header>
-                        <!--                    name-->
-                        <h4>
-                            Nissan GT - R
-                        </h4>
-                        <!--                    grade-->
-                        <div class="selected__car-info-reviews">
-                            <div>
-                                <img src="img/icons/star-gold.png" alt="gold star">
-                                <img src="img/icons/star-gold.png" alt="gold star">
-                                <img src="img/icons/star-gold.png" alt="gold star">
-                                <img src="img/icons/star-gold.png" alt="gold star">
-                                <img src="img/icons/star.png" alt="star">
+                    <div class="selected__car-div">
+                        <header>
+                            <!--                    name-->
+                            <h4>
+                                Nissan GT - R
+                            </h4>
+                            <!--                    grade-->
+                            <div class="selected__car-info-reviews">
+                                <div>
+                                    <img src="img/icons/star-gold.png" alt="gold star">
+                                    <img src="img/icons/star-gold.png" alt="gold star">
+                                    <img src="img/icons/star-gold.png" alt="gold star">
+                                    <img src="img/icons/star-gold.png" alt="gold star">
+                                    <img src="img/icons/star.png" alt="star">
+                                </div>
+                                <a href="#">440+ Reviewer</a>
                             </div>
-                            <a href="#">440+ Reviewer</a>
+                        </header>
+                        <!--                    description-->
+                        <p class="selected__car-info-text">
+                            NISMO has become the embodiment of Nissan's outstanding performance,
+                            inspired by the most unforgiving proving ground, the "race track".
+                        </p>
+                        <!--                    main info-->
+                        <div class="selected__car-main_info">
+                            <div class="selected__car-main_info-left col-5">
+                                <div>
+                                    <p class="selected__car_gray-text">Type Car</p>
+                                    <p class="selected__car_bold-text">Sport</p>
+                                </div>
+                                <div>
+                                    <p class="selected__car_gray-text">Steering</p>
+                                    <p class="selected__car_bold-text">Manual</p>
+                                </div>
+                            </div>
+                            <div class="selected__car-main_info-right col-5">
+                                <div>
+                                    <p class="selected__car_gray-text">Capacity</p>
+                                    <p class="selected__car_bold-text">2 Person</p>
+                                </div>
+                                <div>
+                                    <p class="selected__car_gray-text">Gasoline</p>
+                                    <p class="selected__car_bold-text">70L</p>
+                                </div>
+                            </div>
                         </div>
-                    </header>
-                    <!--                    description-->
-                    <p class="selected__car-info-text">
-                        NISMO has become the embodiment of Nissan's outstanding performance,
-                        inspired by the most unforgiving proving ground, the "race track".
-                    </p>
-                    <!--                    main info-->
-                    <div class="selected__car-main_info">
-                        <div class="selected__car-main_info-left col-5">
+                        <!--                    price and order-->
+                        <footer class="selected__car-footer">
+                            <!--                        price-->
                             <div>
-                                <p class="selected__car_gray-text">Type Car</p>
-                                <p class="selected__car_bold-text">Sport</p>
+                                <p>
+                                    $80.00/ <span>days</span><br>
+                                    <span><s>$100.00</s></span>
+                                </p>
                             </div>
+                            <!--                        order-->
                             <div>
-                                <p class="selected__car_gray-text">Steering</p>
-                                <p class="selected__car_bold-text">Manual</p>
+                                <a href="#">
+                                    Rent Now
+                                </a>
                             </div>
-                        </div>
-                        <div class="selected__car-main_info-right col-5">
-                            <div>
-                                <p class="selected__car_gray-text">Capacity</p>
-                                <p class="selected__car_bold-text">2 Person</p>
-                            </div>
-                            <div>
-                                <p class="selected__car_gray-text">Gasoline</p>
-                                <p class="selected__car_bold-text">70L</p>
-                            </div>
-                        </div>
+                        </footer>
                     </div>
-                    <!--                    price and order-->
-                    <footer class="selected__car-footer">
-                        <!--                        price-->
-                        <div>
-                            <p>
-                                $80.00/ <span>days</span><br>
-                                <!--                                <span><s>$100.00</s></span>-->
-                            </p>
-                        </div>
-                        <!--                        order-->
-                        <div>
-                            <a href="#">
-                                Rent Now
-                            </a>
-                        </div>
-                    </footer>
                 </section>
             </section>
 
@@ -278,11 +280,15 @@
                     <span id="reviews-count" class="reviews-count"></span>
                 </div>
                 <div id="all-reviews" class="reviews__list"></div>
-                <div class="row justify-content-center">
-                    <a class="reviews__show">
+                <div class="row justify-content-center position-relative">
+                    <button class="reviews__show reviews__show-start">
                         Show All
                         <img src="img/icons/arrow.png" alt="arrow">
-                    </a>
+                    </button>
+                    <button class="reviews__show reviews__show-end">
+                        Show Less
+                        <img src="img/icons/arrow.png" alt="arrow">
+                    </button>
                 </div>
             </section>
 
@@ -428,8 +434,9 @@
                 <p>{{carClass}}</p>
             </div>
             <div>
-                <button>
-                    <img src="{{imageLike}}" alt="imageLike">
+                <button class="car__item-like">
+                    <img src="img/icons/like.png" alt="imageLike" class="car__item-def-like">
+                    <img src="img/icons/like-red.png" alt="userLike" class="car__item-user-like">
                 </button>
             </div>
         </header>
@@ -454,7 +461,8 @@
         <footer class="car__item-footer">
             <div>
                 <p>
-                    ${{price}}/<span> day</span>
+                    ${{priceNow}}/<span> day</span> <br>
+                    <span><s>{{priceUs}}</s></span>
                 </p>
             </div>
             <div>
@@ -470,7 +478,6 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/mustache.min.js"></script>
-<script src="js/filter.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

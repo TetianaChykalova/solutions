@@ -135,64 +135,60 @@ const recentCar =[
     {
         carName: "Koenigsegg",
         carClass: "Sport",
-        imageLike: "img/icons/like.png",
         imageCar: "img/recent-car-0.png",
         gasoline: "90L",
         steering: "Manual",
         capacity: "2 People",
-        price: "99.00",
+        priceNow: "99.00",
     },
     {
         carName: "Nissan GT - R",
         carClass: "Sport",
-        imageLike: "img/icons/like.png",
         imageCar: "img/recent-car-1.png",
         gasoline: "80L",
         steering: "Manual",
         capacity: "2 People",
-        price: "100.00",
+        priceNow: "80.00",
+        priceUs: "100.00",
     },
     {
         carName: "Rolls-Royce",
         carClass: "Sport",
-        imageLike: "img/icons/like.png",
         imageCar: "img/recent-car-2.png",
         gasoline: "70L",
         steering: "Manual",
         capacity: "4 People",
-        price: "96.00",
+        priceNow: "96.00",
     },
 ];
 const recommendCar =[
     {
         carName: "All New Rush",
         carClass: "SUV",
-        imageLike: "img/icons/like.png",
         imageCar: "img/recommend-car-0.png",
         gasoline: "70L",
         steering: "Manual",
         capacity: "6 People",
-        price: "80.00",
+        priceNow: "72.00",
+        priceUs: "100.00",
     },
     {
         carName: "CR  - V",
         carClass: "SUV",
-        imageLike: "img/icons/like.png",
         imageCar: "img/recommend-car-1.png",
         gasoline: "80L",
         steering: "Manual",
         capacity: "6 People",
-        price: "80.00",
+        priceNow: "80.00",
     },
     {
         carName: "All New Terios",
         carClass: "SUV",
         imageLike: "img/icons/like.png",
-        imageCar: "img/recommend-car-2.png",
         gasoline: "90L",
         steering: "Manual",
         capacity: "6 People",
-        price: "74.00",
+        priceNow: "74.00",
     },
 ];
 let templateCar = document.querySelector("#car__item").innerHTML;
@@ -255,7 +251,7 @@ function addRecommendCar() {
 }
 addRecommendCar();
 
-//filter
+//price
 let sidebarPriceSlider = document.getElementById("userPrice");
 var sidebarPriceValue = document.getElementById("sidebar-price-value");
 sidebarPriceValue.innerHTML = sidebarPriceSlider.value;
@@ -263,3 +259,41 @@ sidebarPriceValue.innerHTML = sidebarPriceSlider.value;
 sidebarPriceSlider.oninput = function() {
     sidebarPriceValue.innerHTML = this.value;
 }
+
+//show reviews
+let showBtn = document.querySelectorAll(".reviews__show");
+let showStart = document.querySelector(".reviews__show-start");
+let showEnd =document.querySelector(".reviews__show-end");
+showBtn.forEach(showBtnItem => {
+    showBtnItem.addEventListener("click", showReviews)
+})
+
+function showReviews () {
+    if (getComputedStyle(allReviews).maxHeight == "265px") {
+        allReviews.style.maxHeight = "100%"
+        showStart.style.zIndex = "-2";
+        showEnd.style.zIndex = "0";
+    }
+    else {
+        allReviews.style.maxHeight = "265px"
+        showStart.style.zIndex = "0";
+        showEnd.style.zIndex = "-2";
+    }
+}
+
+//like
+let likeBtn = document.querySelectorAll(".car__item-like");
+likeBtn.forEach(likeBtnItem => {
+    likeBtnItem.addEventListener("click", function() {
+        let likeDef = likeBtnItem.querySelector(".car__item-def-like");
+        let likeUser = likeBtnItem.querySelector(".car__item-user-like");
+        if (getComputedStyle(likeDef).zIndex == "0") {
+            likeDef.style.zIndex = "-2";
+            likeUser.style.zIndex = "0";
+        }
+        else {
+            likeDef.style.zIndex = "0";
+            likeUser.style.zIndex = "-2";
+        }
+    });
+})
