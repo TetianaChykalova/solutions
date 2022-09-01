@@ -184,7 +184,7 @@ const recommendCar =[
     {
         carName: "All New Terios",
         carClass: "SUV",
-        imageLike: "img/icons/like.png",
+        imageCar: "img/recommend-car-2.png",
         gasoline: "90L",
         steering: "Manual",
         capacity: "6 People",
